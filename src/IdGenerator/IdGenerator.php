@@ -19,7 +19,7 @@ class IdGenerator
 
     private static $counter = 0;
     private static $lastMs = false;
-    private static $machineId = 00;
+    private static $machineId = "00";
     private static $counterLimit = 9999;
     public static function getId()
     {
@@ -41,7 +41,7 @@ class IdGenerator
         }
 
         $counter = self::getCounter($time);
-        return $time.$counter;
+        return $time.self::$machineId.$counter;
     }
 
     private static function getTimestamp()
