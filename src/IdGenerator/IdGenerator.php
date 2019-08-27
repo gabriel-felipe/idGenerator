@@ -19,7 +19,7 @@ class IdGenerator
 
     private static $counter = 0;
     private static $lastMs = false;
-    private static $machineId = "00";
+    private static $machineId = ID_GENERATOR_MACHINE_ID;
     private static $counterLimit = 9999;
     public static function getId()
     {
